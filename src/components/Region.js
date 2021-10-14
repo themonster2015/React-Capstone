@@ -1,9 +1,10 @@
 import React from 'react';
-import { useRouteMatch, useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 export default function Region() {
   const slug = useParams();
+  const history = useHistory();
 
   const data = useSelector(
     (state) => state.covid.regions,
@@ -11,11 +12,13 @@ export default function Region() {
   const details = data.filter(
     (region) => region.name === slug.id,
   );
-  console.log(useRouteMatch());
-  console.log(details[0]);
 
   return (
     <div>
+      <button type="button" onClick={() => history.goBack()}>
+        <i className="fas fa-long-arrow-alt-left" />
+      </button>
+
       Region
       {details[0].name}
       <div>

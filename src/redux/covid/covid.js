@@ -6,28 +6,32 @@ const country = 'Spain';
 const GET_GENERAL_COVID_DATA = 'covidStore/covid/GET_GENERAL_COVID_DATA';
 const GET_REGION_DATA = 'covidStore/covid/GET_REGION_DATA';
 
-export const getGeneralData = () => (dispatch) => {
+export const getGeneralData = () => async (dispatch) => {
   const today = new Date();
   const month = today.getMonth() + 1;
   const date = `${today.getFullYear()}-${month}-${today.getDate() - 1}`;
-  fetch(`${api}/${date}/country/${country}`)
+  await fetch(`${api}/${date}/country/${country}`)
     .then((res) => res.json())
     .then((data) => {
-      const res = Object.entries(data)[0][1];
-      const { regions } = Object.entries(data)[0][1][date].countries[country];
+      const res = Object.entries(data)[0][1][date].countries[country];
+      const { regions } = res;
       const detailedData = [];
+      console.log(res.today_new_confirmed);
 
       regions.forEach((region) => {
-        detailedData.push({
+        detailedData.push(region);
+        /*       {
           name: region.name,
           today_new_confirmed: region.today_new_confirmed,
           today_new_deaths: region.today_new_deaths,
 
-        });
+        }  */
       });
       const covidData = [];
-      covidData.push({ today_new_confirmed: res.today_new_confirmed },
-        { today_new_deaths: res.today_new_deaths });
+      covidData.push({
+        today_new_confirmed: res.today_new_confirmed,
+        today_new_deaths: res.today_new_deaths,
+      });
       dispatch({
         type: GET_GENERAL_COVID_DATA,
         payload: covidData,
