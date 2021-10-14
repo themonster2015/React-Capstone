@@ -9,7 +9,7 @@ const GET_REGION_DATA = 'covidStore/covid/GET_REGION_DATA';
 export const getGeneralData = () => async (dispatch) => {
   const today = new Date();
   const month = today.getMonth() + 1;
-  const date = `${today.getFullYear()}-${month}-${today.getDate() - 1}`;
+  const date = `${today.getFullYear()}-${month}-${today.getDate()}`;
   await fetch(`${api}/${date}/country/${country}`)
     .then((res) => res.json())
     .then((data) => {
@@ -20,12 +20,6 @@ export const getGeneralData = () => async (dispatch) => {
 
       regions.forEach((region) => {
         detailedData.push(region);
-        /*       {
-          name: region.name,
-          today_new_confirmed: region.today_new_confirmed,
-          today_new_deaths: region.today_new_deaths,
-
-        }  */
       });
       const covidData = [];
       covidData.push({

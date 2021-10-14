@@ -1,16 +1,29 @@
 .App {
   text-align: center;
-  background-color: pink;
+}
+
+body {
+  background-color: #db4380;
+  color: white;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
+  margin: 10px 50px;
+}
+.grid-container > .card:nth-child(4n + 1) {
+  background-color: #c2346d;
+}
+
+.grid-container > .card:nth-child(4n) {
+  background-color: #c2346d;
 }
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 li {
@@ -18,4 +31,38 @@ li {
   height: 100px;
   vertical-align: middle;
   background-color: salmon;
+}
+
+.card {
+  background-color: pink;
+  border: none;
+}
+
+.card-img-top > i,
+header > i,
+.big-icon {
+  font-size: 7em !important;
+  color: grey;
+}
+
+header {
+  align-items: center;
+}
+
+.card-header {
+  background-color: transparent;
+}
+
+.metric-div {
+  width: 100%;
+  margin: auto;
+  padding: 20px 10px 20px 10px;
+}
+
+.metric-div:nth-child(odd) {
+  background-color: #c2346d;
+}
+
+.region-name {
+  float: right;
 }

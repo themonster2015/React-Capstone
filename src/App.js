@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getGeneralData());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">
