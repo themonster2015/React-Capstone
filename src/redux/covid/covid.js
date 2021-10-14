@@ -16,7 +16,6 @@ export const getGeneralData = () => async (dispatch) => {
       const res = Object.entries(data)[0][1][date].countries[country];
       const { regions } = res;
       const detailedData = [];
-      console.log(res.today_new_confirmed);
 
       regions.forEach((region) => {
         detailedData.push(region);
