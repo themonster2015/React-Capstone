@@ -34,7 +34,7 @@ export default function Region() {
       </div>
       <div className="region-name d-flex justify-content-between w-75 mr-5">
         <span><i className="fas fa-3x fa-globe-europe big-icon" /></span>
-        <div className="d-flex justify-content-center flex-column ">
+        <div className="d-flex justify-content-center align-items-end flex-column ">
           <span className="h2">
             {details[0].name}
           </span>

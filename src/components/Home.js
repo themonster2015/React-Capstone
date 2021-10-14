@@ -13,7 +13,8 @@ export default function Home() {
   const handleClick = (e) => {
     const type = e.target.id;
     if (type === 'zero') {
-      return setFilteredData(regions.filter((region) => region.today_new_confirmed === 0));
+      const filtered = regions.filter((region) => region.today_new_confirmed === 0);
+      return setFilteredData(filtered);
     } if (type === 'highest') {
       const filtered = regions.filter(
         (region) => region.today_new_open_cases > 100,
@@ -59,7 +60,7 @@ export default function Home() {
         <i className="fas fa-3x fa-sun" />
         <div>
           <h1>COVID DATA for SPAIN</h1>
-          {filteredData.length > 0 ? (
+          {data.general[0] ? (
             <>
               <span>
                 Today&#39;s New Confirmed:
