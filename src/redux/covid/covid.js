@@ -37,9 +37,6 @@ export const getGeneralData = () => async (dispatch) => {
     .catch((err) => console.log(err));
 };
 
-export const getRegionData = () => () => {
-};
-
 const covidReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_GENERAL_COVID_DATA:
