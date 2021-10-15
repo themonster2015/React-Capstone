@@ -51,5 +51,6 @@ Feel free to check the [issues page](https://github.com/themonster2015/React-Cap
 
 Give a ⭐️ if you like this project!
 
+The design in this project is based on the work of [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29) on Behance.
 
 This project is [MIT](./MIT.md) licensed.
