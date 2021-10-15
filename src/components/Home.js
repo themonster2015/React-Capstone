@@ -62,13 +62,18 @@ export default function Home() {
           <h1>COVID DATA for SPAIN</h1>
           {data.general[0] ? (
             <>
-              <span>
+              <span className="p-3">
                 Today&#39;s New Confirmed:
+              </span>
+              <span>
+                {' '}
                 {data.general[0].today_new_confirmed}
               </span>
               <br />
-              <span>
+              <span className="p-3">
                 Today&#39;s New Deaths:
+              </span>
+              <span>
                 {data.general[0].today_new_deaths}
               </span>
             </>
