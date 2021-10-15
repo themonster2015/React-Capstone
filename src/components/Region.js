@@ -1,12 +1,10 @@
 import React from 'react';
-import { useParams, useHistory, Redirect } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import TopBar from './TopBar';
 
 export default function Region() {
   const slug = useParams();
-  const history = useHistory();
-
   const details = useSelector(
     (state) => state.covid.regions.filter(
       (region) => region.name === slug.id,
@@ -19,17 +17,9 @@ export default function Region() {
 
   return (
     <div>
-      <div className="d-flex ">
-        <button className="float-left" type="button" onClick={() => history.push('/')}>
-          <i className="fas fa-arrow-alt-circle-left" />
-          {' '}
+      <div>
 
-        </button>
-        <span className="m-auto">
-          <TopBar region={details[0].name} />
-          {' '}
-
-        </span>
+        <TopBar region={details[0].name} />
 
       </div>
       <div className="region-name d-flex justify-content-between w-75 mr-5">
