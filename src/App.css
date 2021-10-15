@@ -7,11 +7,20 @@ body {
   color: white;
 }
 
+header {
+  align-items: center;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   margin: 10px 50px;
+}
+
+.card {
+  background-color: pink;
+  border: none;
 }
 
 .grid-container > .card:nth-child(4n + 1) {
@@ -33,20 +42,11 @@ li {
   vertical-align: middle;
 }
 
-.card {
-  background-color: pink;
-  border: none;
-}
-
-.card-img-top > i,
 header > i,
+.card-img-top > i,
 .big-icon {
   font-size: 7em !important;
   color: grey;
-}
-
-header {
-  align-items: center;
 }
 
 .card-header {
