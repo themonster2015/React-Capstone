@@ -2,10 +2,14 @@
 > This is a single page application (SPA) that shows current covid stats for Spain. It consumes the [Narrativa API](https://covid19tracking.narrativa.com/index_en.html). Users can use the filters to see regions with no new cases or regions with the highest number of cases for the day.
 
 ## Screenshots
-<p>
-  [screenshot](www.aaa.com)
-</p>
 
+Homepage:
+  ![Screen Shot 2021-10-15 at 10 23 19](https://user-images.githubusercontent.com/10905837/137460007-ee391052-62f3-44d2-8013-533f417901ee.png)
+  Details Page:
+![Screen Shot 2021-10-15 at 10 51 02](https://user-images.githubusercontent.com/10905837/137460320-f022385b-8e55-4068-bcba-9438086942f0.png)
+
+
+[Loom video presentation](https://www.loom.com/share/67630cd92fbe48f28395f79ffe7d0bae)
 
 ## Built With
 
