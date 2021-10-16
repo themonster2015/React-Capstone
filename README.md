@@ -9,8 +9,6 @@ Homepage:
 ![Screen Shot 2021-10-15 at 10 51 02](https://user-images.githubusercontent.com/10905837/137460320-f022385b-8e55-4068-bcba-9438086942f0.png)
 
 
-[Loom video presentation](https://www.loom.com/share/67630cd92fbe48f28395f79ffe7d0bae)
-
 ## Built With
 
 - Javascript
